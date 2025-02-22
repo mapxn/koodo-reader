@@ -43,6 +43,13 @@ export const driveList = [
     support: ["desktop", "browser", "phone"],
   },
   {
+    label: "pCloud",
+    value: "pcloud",
+    icon: "icon-pcloud",
+    isPro: true,
+    support: ["desktop", "phone"],
+  },
+  {
     label: "阿里云盘",
     value: "adrive",
     icon: "icon-adrive",
@@ -75,6 +82,7 @@ interface ConfigItem {
   label: string;
   value: string;
   type: string;
+  required?: boolean;
 }
 
 // Type the driveInputConfig
@@ -216,7 +224,7 @@ export const driveInputConfig: DriveInputConfig = {
     {
       label: "SecretAccessKey",
       value: "secretAccessKey",
-      type: "text",
+      type: "password",
     },
   ],
   google: [
@@ -236,7 +244,7 @@ export const driveInputConfig: DriveInputConfig = {
   dropbox: [
     {
       label: "Token",
-      value: "code",
+      value: "token",
       type: "text",
     },
   ],
